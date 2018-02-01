@@ -40,6 +40,10 @@ RUN printf "\n" | pecl install -o -f redis \
     &&  rm -rf /tmp/pear \
     &&  docker-php-ext-enable redis
 
+# Install APCu
+RUN pecl install apcu-4.0.11 \
+    && echo extension=apcu.so > /usr/local/etc/php/conf.d/apcu.ini
+
 # Configure www-data user
 RUN usermod -u 1000 www-data
 
