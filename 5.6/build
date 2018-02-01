@@ -1,0 +1,2 @@
+docker build -t rpopuc/php-nginx:5.6-alpine ./docker/
+#docker push rpopuc/php-nginx:5.6-alpine
